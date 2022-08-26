@@ -16,29 +16,13 @@ namespace SpaceShuttle.Movements
             _rigidbody = playerController.GetComponent<Rigidbody>();
         }
 
-        public void FixedTick(Quaternion direction)
+        public void FixedTick(Vector2 direction)
         {
-            // if (direction == new Vector2(0,0))
-            // {
-            //     if (_rigidbody.freezeRotation) _rigidbody.freezeRotation = false;
-            //     
-            //     return;
-            // }
-            //
-            // if (!_rigidbody.freezeRotation) _rigidbody.freezeRotation = true;
+            Vector3 currentPos = _playerController.transform.position;
+            Vector3 newPos = new Vector3(direction.x, 0, direction.y);
+            Vector3 positionLookAt = currentPos + newPos;
             
-            _playerController.transform.rotation = Quaternion.RotateTowards(_playerController.transform.rotation, ,Vector3.up * _playerController.TurnSpeed * Time.deltaTime);
-        }
-
-        Quaternion CalculateRotation()
-        {
-            Quaternion temp = Quaternion.LookRotation(CalculateDirection(), Vector3.up);
-            return temp;
-        }
-
-        Vector3 CalculateDirection()
-        {
-            Vector3 temp = ()
+            _playerController.transform.LookAt(positionLookAt);
         }
     }
 }

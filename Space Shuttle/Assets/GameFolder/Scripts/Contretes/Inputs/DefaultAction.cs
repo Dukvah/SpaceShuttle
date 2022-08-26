@@ -33,7 +33,7 @@ namespace SpaceShuttle.Inputs
                     ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""2f654172-5a4e-4e67-b528-e657066070bd"",
-                    ""expectedControlType"": ""Quaternion"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -43,7 +43,7 @@ namespace SpaceShuttle.Inputs
                 {
                     ""name"": """",
                     ""id"": ""f7371caf-f005-4e4a-8f61-9695bf9ab878"",
-                    ""path"": ""<AndroidJoystick>/stick"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

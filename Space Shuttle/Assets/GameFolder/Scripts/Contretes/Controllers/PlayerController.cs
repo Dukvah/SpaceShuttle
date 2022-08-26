@@ -16,7 +16,7 @@ namespace SpaceShuttle.Controllers
         Rotator _rotator;
         InputController _input;
 
-        Quaternion _joystickDir;
+        Vector2 _joystickDir;
         bool _canMove;
         bool _canForceForward;
         

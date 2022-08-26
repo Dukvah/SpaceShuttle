@@ -9,8 +9,9 @@ namespace SpaceShuttle.Inputs
     {
         DefaultAction _input;
 
-        public bool IsForceForward { get; set; }
-        public Quaternion JoystickDirection { get; set; }
+        public bool IsForceForward { get; private set; }
+        public Vector2 JoystickDirection { get; private set; }
+
 
         public InputController()
         {
@@ -18,15 +19,11 @@ namespace SpaceShuttle.Inputs
             
             _input.Astronaut.Move.performed += context =>
             {
-                JoystickDirection =  context.ReadValue<Quaternion>();
-                
-                IsForceForward = true;
-                // if (context.ReadValue<Vector2>() != new Vector2(0,0))
-                // {
-                //     IsForceForward = true;
-                // }
+                JoystickDirection = context.ReadValue<Vector2>();
+                IsForceForward = JoystickDirection.x != 0 || JoystickDirection.y != 0;
             };
-
+            
+            
             _input.Enable();
         }
     }

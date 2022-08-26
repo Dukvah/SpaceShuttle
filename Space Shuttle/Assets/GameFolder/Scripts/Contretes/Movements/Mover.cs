@@ -20,7 +20,7 @@ namespace SpaceShuttle.Movements
         {
             if (isTouch)
             {
-                _rigidbody.AddRelativeForce(Vector3.right * Time.deltaTime * _playerController.Force);
+                _rigidbody.AddRelativeForce(Vector3.forward * Time.deltaTime * _playerController.Force);
             }
         }
     }
