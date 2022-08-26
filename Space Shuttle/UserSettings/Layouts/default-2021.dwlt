@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 38
+  controlID: 16
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -146,14 +146,14 @@ MonoBehaviour:
     y: 540
     width: 1466
     height: 407
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 76
+  controlID: 18
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,25 +341,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 2
+    m_SearchArea: 1
     m_Folders:
-    - Packages/com.unity.cinemachine
+    - Assets/GameFolder
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Packages/com.unity.cinemachine
+  - Assets/GameFolder
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\elifa\\OneDrive\\Masa\xFCst\xFC\\Unity Projects\\SpaceShuttle\\Space
-    Shuttle"
+  m_LastProjectPath: C:\Unity Projects\SpaceShuttle\Space Shuttle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66740000
-    m_LastClickedID: 29798
-    m_ExpandedIDs: 000000009e720000a0720000a2720000
+    m_SelectedIDs: 9a740000
+    m_LastClickedID: 29850
+    m_ExpandedIDs: 00000000fc720000fe720000007300000273000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e720000a0720000a2720000
+    m_ExpandedIDs: 00000000fc720000fe7200000073000002730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +516,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e6faffff
+      m_ExpandedIDs: e4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -799,9 +798,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1231191, y: -0.29480702, z: -8.528525}
+    m_Target: {x: 8.0042095, y: 14.89985, z: 27.795193}
     speed: 2
-    m_Value: {x: 1.1231191, y: -0.29480702, z: -8.528525}
+    m_Value: {x: 8.0042095, y: 14.89985, z: 27.795193}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -848,13 +847,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.022491185, y: -0.97567457, z: 0.12092363, w: -0.18147053}
+    m_Target: {x: 0.046703428, y: 0.8615716, z: -0.08062493, w: 0.49902308}
     speed: 2
-    m_Value: {x: 0.022491185, y: 0.9756745, z: -0.12092362, w: 0.18147053}
+    m_Value: {x: 0.046703428, y: 0.8615716, z: -0.08062493, w: 0.4990231}
   m_Size:
-    m_Target: 8.687175
+    m_Target: 3.1610756
     speed: 2
-    m_Value: 8.687175
+    m_Value: 3.1610756
   m_Ortho:
     m_Target: 0
     speed: 2
