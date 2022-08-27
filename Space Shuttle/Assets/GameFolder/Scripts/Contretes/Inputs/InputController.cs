@@ -22,6 +22,10 @@ namespace SpaceShuttle.Inputs
                 JoystickDirection = context.ReadValue<Vector2>();
                 IsForceForward = JoystickDirection.x != 0 || JoystickDirection.y != 0;
             };
+            _input.Astronaut.Move.canceled += context =>
+            {
+                IsForceForward = false;
+            };
             
             
             _input.Enable();
