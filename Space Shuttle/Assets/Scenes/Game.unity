@@ -450,8 +450,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200977576}
-  m_LocalRotation: {x: 0.36093506, y: -0.000000064039234, z: 0.000000024784722, w: 0.93259096}
-  m_LocalPosition: {x: -21.569998, y: 25.672096, z: -34.284523}
+  m_LocalRotation: {x: 0.3609351, y: -0.00000006736169, z: 0.000000026070591, w: 0.93259096}
+  m_LocalPosition: {x: -26.009996, y: 15.6020975, z: -9.66452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -610,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217656995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4007225, y: 14.256968, z: -47.100033}
+  m_LocalPosition: {x: -9.4007225, y: 44.53, z: -47.100033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -846,15 +846,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bef399b75dc0ac445a132495dd999f45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.57
+      value: -26.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bef399b75dc0ac445a132495dd999f45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: -9.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bef399b75dc0ac445a132495dd999f45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.09
+      value: 12.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bef399b75dc0ac445a132495dd999f45, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1310,23 +1310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &782254308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782254303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3d2c92a0571244da1a67af958320d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _joystick: {fileID: 1114710652}
-  _canvas: {fileID: 782254306}
-  _canvasRT: {fileID: 782254307}
-  _joyStickRT: {fileID: 1114710653}
-  _camera: {fileID: 200977578}
 --- !u!1001 &910916988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1517,8 +1500,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991841923}
-  m_LocalRotation: {x: 0.36093506, y: -0.000000064039234, z: 0.000000024784722, w: 0.93259096}
-  m_LocalPosition: {x: -21.569998, y: 25.672096, z: -34.284523}
+  m_LocalRotation: {x: 0.3609351, y: -0.00000006736169, z: 0.000000026070591, w: 0.93259096}
+  m_LocalPosition: {x: -26.009996, y: 15.6020975, z: -9.66452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2033,6 +2016,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8108661014830321521, guid: f6404acb2fb890e488c3fb5231a1c934, type: 3}
   m_PrefabInstance: {fileID: 1302045855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1305072166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bef399b75dc0ac445a132495dd999f45, type: 3}
+  m_PrefabInstance: {fileID: 343643520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1305072167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305072166}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0.5
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &1305072168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305072166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd9fa68d4e51ba4bb8c4f160a523750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _turnSpeed: 10
+  _force: 50
 --- !u!1 &1421832846
 GameObject:
   m_ObjectHideFlags: 3
