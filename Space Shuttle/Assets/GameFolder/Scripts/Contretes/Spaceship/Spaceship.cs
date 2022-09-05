@@ -13,14 +13,17 @@ public class Spaceship : MonoBehaviour
     RaycastHit hit;
 
     public Vector3 Destination { get; set; }
+    public bool CanFly { get; set; }
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        CanFly = true;
     }
 
 
     private void Update()
     {
+        if (!CanFly) return;
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);

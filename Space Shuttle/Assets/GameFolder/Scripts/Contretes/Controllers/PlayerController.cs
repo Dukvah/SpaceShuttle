@@ -41,20 +41,17 @@ namespace SpaceShuttle.Controllers
         }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                _animator.SetBool("Fly", true);
-            }
-
             if (!_canMove) return;
 
             if (_input.IsForceForward)
             {
                 _canForceForward = true;
+                _animator.SetBool("isFly", true);
             }
             else
             {
                 _canForceForward = false;
+                _animator.SetBool("isFly", false);
             }
 
             _joystickDir = _input.JoystickDirection;
@@ -64,8 +61,7 @@ namespace SpaceShuttle.Controllers
         {
             if (_canForceForward)
             {
-                _animator.SetBool("IdleToFly", true);
-                _animator.SetBool("Fly", true);
+                Debug.Log("ssss");
                 _mover.FixedTick(_canForceForward);
             }
 
