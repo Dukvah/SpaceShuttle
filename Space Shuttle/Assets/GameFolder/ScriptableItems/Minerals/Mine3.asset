@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2226d09b2ffe57c418a4bc5a5bc91508, type: 3}
+  m_Name: Mine3
+  m_EditorClassIdentifier: 
+  itemName: Mine 3
+  itemDescription: 
+  canStackable: 1
+  itemIcon: {fileID: 21300000, guid: c679c5d34011ec84dbd3ab3496c457b2, type: 3}
+  itemPrefab: {fileID: 860780724013192034, guid: 7c2d19e85ffec44478ab9b941bf5c61e, type: 3}
+  itemValue: 10

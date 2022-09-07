@@ -61,7 +61,6 @@ namespace SpaceShuttle.Controllers
         {
             if (_canForceForward)
             {
-                Debug.Log("ssss");
                 _mover.FixedTick(_canForceForward);
             }
 
