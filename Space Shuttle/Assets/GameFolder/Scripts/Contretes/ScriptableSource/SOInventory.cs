@@ -38,6 +38,22 @@ public class SOInventory : ScriptableObject
 
         return false;
     }
+    
+    public bool CheckInventory(SOItem item)
+    {
+        foreach (Slot slot in inventorySlots)
+        {
+            if (!slot.isFull)
+            {
+                if (slot.item == item || slot.item == null)
+                {
+                    return true;   
+                }
+            }
+        }
+
+        return false;
+    }
 }
 
 [System.Serializable]

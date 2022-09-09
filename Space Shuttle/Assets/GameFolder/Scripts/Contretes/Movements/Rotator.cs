@@ -7,13 +7,11 @@ namespace SpaceShuttle.Movements
 {
     public class Rotator
     {
-        Rigidbody _rigidbody;
         PlayerController _playerController;
 
         public Rotator(PlayerController playerController)
         {
             _playerController = playerController;
-            _rigidbody = playerController.GetComponent<Rigidbody>();
         }
 
         public void FixedTick(Vector2 direction)

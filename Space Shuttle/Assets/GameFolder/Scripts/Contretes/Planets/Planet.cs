@@ -18,7 +18,7 @@ public class Planet : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void Start()
     {
         transform.DOLocalRotate(new Vector3(0, 360, 0), 50f, RotateMode.FastBeyond360).SetRelative(true)
             .SetEase(Ease.Linear);

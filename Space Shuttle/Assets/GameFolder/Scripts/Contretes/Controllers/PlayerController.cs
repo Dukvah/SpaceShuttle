@@ -9,6 +9,9 @@ namespace SpaceShuttle.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] OxygenSlider _oxygen;
+        [SerializeField] UIManager _uiManager;
+        
         [SerializeField] float _turnSpeed;
         [SerializeField] float _force;
 
@@ -23,7 +26,6 @@ namespace SpaceShuttle.Controllers
         bool _canForceForward;
 
         public float Force => _force;
-        public float TurnSpeed => _turnSpeed;
         public bool canMove => _canMove;
 
         private void Awake()
@@ -59,6 +61,11 @@ namespace SpaceShuttle.Controllers
 
         private void FixedUpdate()
         {
+            if ( _oxygen.DecreaseProgress(0.001f))
+            {
+                _uiManager.GameOver();
+            }
+
             if (_canForceForward)
             {
                 _mover.FixedTick(_canForceForward);

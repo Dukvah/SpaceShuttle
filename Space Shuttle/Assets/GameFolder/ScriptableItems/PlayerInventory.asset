@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   inventorySlots:
-  - isFull: 1
-    itemCount: 9
-    item: {fileID: 11400000, guid: 8a5aabeaa7a912840b79eaec65795b3a, type: 2}
-  - isFull: 0
-    itemCount: 1
-    item: {fileID: 11400000, guid: 8a5aabeaa7a912840b79eaec65795b3a, type: 2}
   - isFull: 0
     itemCount: 4
     item: {fileID: 11400000, guid: b55ab60c78c5fb5439ad8f640ca5eb28, type: 2}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
   - isFull: 0
     itemCount: 0
     item: {fileID: 0}

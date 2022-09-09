@@ -6,16 +6,19 @@ using UnityEngine.AI;
 
 public class Spaceship : MonoBehaviour
 {
-    [SerializeField] Camera mainCamera;
-    [SerializeField] LayerMask layerMask;
+    [SerializeField] Camera _mainCamera;
+    [SerializeField] LayerMask _layerMask;
+    [SerializeField] GameObject _radarZone;
 
-    private NavMeshAgent navMeshAgent;
+    Animator animator;
+    EntryBar entryBar;
+    NavMeshAgent navMeshAgent;
     RaycastHit hit;
-
-    public Vector3 Destination { get; set; }
     public bool CanFly { get; set; }
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        entryBar = GetComponent<EntryBar>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         CanFly = true;
     }
@@ -26,11 +29,30 @@ public class Spaceship : MonoBehaviour
         if (!CanFly) return;
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out  hit, float.MaxValue, layerMask))
+            Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out  hit, float.MaxValue, _layerMask))
             {
                 navMeshAgent.destination = hit.point;
             }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (entryBar.IncreaseProgress(0.005f))
+            {
+                animator.SetBool("OpenDoor",true);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            entryBar.ResetProgress();
         }
     }
 }
