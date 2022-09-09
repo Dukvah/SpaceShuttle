@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91aae4f9a1d0a3a4a87aaa5f2e02e02a
+guid: 866edc052d0aa554388ce9ebc74471a2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -92,7 +92,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: joint1
+    rootMotionBoneName: group1
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
