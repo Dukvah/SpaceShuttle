@@ -28,4 +28,17 @@ public class OxygenSlider : MonoBehaviour
             return false;
         }
     }
+    public bool IncreaseProgress(float increase)
+    {
+        _slider.value += increase;
+
+        if (_slider.value <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

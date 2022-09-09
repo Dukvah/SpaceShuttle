@@ -6,36 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="90b49dae-2419-44fa-91f2-7e25afbb6a76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Space Shuttle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Space Shuttle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsFolder/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/AstAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Animations/AstAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/ShipAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Animations/ShipAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautFly.v8.1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautFly.v8.1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautIdle.v8.1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautIdle.v8.1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautIdleToFly.v8.1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautIdleToFly.v8.1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/Minerals/Mine1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/Minerals/Mine1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/EntryZone.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/EntryZone.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/Frame.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Animations/Frame.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautSitPosition.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Models/Astronaut/AstronautSitPosition.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Astronaut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Astronaut.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Astronaut.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Astronaut.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Spaceship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Prefabs/PlayerObjects/Spaceship.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/ScriptableItems/PlayerInventory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/ScriptableItems/PlayerInventory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Controllers/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Controllers/CameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Controllers/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Inventory/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Inventory/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Movements/Rotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Movements/Rotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Planet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Planet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/ScriptableSource/SOInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/ScriptableSource/SOInventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Spaceship/Spaceship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Spaceship/Spaceship.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/EntryBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/EntryBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/OxygenSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/OxygenSlider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +37,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Inventory/SlotUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/ScriptableSource/SOItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/EntryBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/OxygenSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFolder/Scripts/Contretes/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,6 +116,7 @@
       <workItem from="1662542068944" duration="5578000" />
       <workItem from="1662567452558" duration="8525000" />
       <workItem from="1662720820565" duration="12280000" />
+      <workItem from="1662754839624" duration="7261000" />
     </task>
     <servers />
   </component>

@@ -229,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.3505}
+  m_AnchoredPosition: {x: 0, y: 0.3}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3805468675176952557
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 2303926580377470733}
   m_Layer: 0
   m_Name: Astronaut
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,6 +738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd9fa68d4e51ba4bb8c4f160a523750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _oxygen: {fileID: 0}
+  _uiManager: {fileID: 0}
   _turnSpeed: 50
   _force: 300
 --- !u!114 &2303926580377470733
@@ -754,7 +756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 7124055619388964092}
   _canvas: {fileID: 3805468675176952557}
-  _canvasObj: {fileID: 0}
 --- !u!1 &4925470507248963146
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5740378965451323771
 Transform:
   m_ObjectHideFlags: 0
@@ -1601,7 +1602,7 @@ GameObject:
   - component: {fileID: 5740378965190209941}
   m_Layer: 0
   m_Name: group1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

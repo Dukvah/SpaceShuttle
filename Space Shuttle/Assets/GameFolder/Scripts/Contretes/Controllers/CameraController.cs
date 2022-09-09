@@ -14,17 +14,15 @@ public class CameraController : MonoBehaviour
     Quaternion spaceshipRotation;
     
     public bool LookAstronaut { get; set; }
-    public bool LookSpaceship { get; set; }
 
     private void Awake()
     {
-        LookSpaceship = false;
         LookAstronaut = false;
         spaceshipRotation = transform.rotation;
         spaceshipPos = transform.position;
     }
     
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (LookAstronaut)
         {
@@ -32,17 +30,12 @@ public class CameraController : MonoBehaviour
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed);
             transform.position = smoothedPosition;
         }
-
-        if (LookSpaceship)
-        {
-            GoSpaceshipLook();
-        }
     }
 
-    void GoSpaceshipLook()
+    public void GoSpaceshipLook()
     {
         transform.DORotateQuaternion(spaceshipRotation, 2f);
-        transform.DOMove(spaceshipPos, 3f).OnComplete(() =>  LookSpaceship = false);
+        transform.DOMove(spaceshipPos, 3f);
     }
     
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -51,7 +48,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject == CollectingItem)
@@ -61,4 +57,5 @@ public class Inventory : MonoBehaviour
             CollectingItem = null;
         }
     }
+
 }
