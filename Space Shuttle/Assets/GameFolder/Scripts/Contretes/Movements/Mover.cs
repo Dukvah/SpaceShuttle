@@ -7,20 +7,20 @@ namespace SpaceShuttle.Movements
 {
     public class Mover
     {
-        Rigidbody _rigidbody;
         PlayerController _playerController;
-
+        GameObject _player;
         public Mover(PlayerController playerController)
         {
-            _playerController = playerController;
-            _rigidbody = playerController.GetComponent<Rigidbody>();
+            _playerController = playerController; ;
+            _player = playerController.gameObject;
         }
 
         public void FixedTick(bool isTouch)
         {
             if (isTouch)
             {
-                _rigidbody.AddRelativeForce(Vector3.forward * Time.deltaTime * _playerController.Force);
+                _player.transform.position += _playerController.Speed * Time.deltaTime * _player.transform.forward;
+                //_rigidbody.AddRelativeForce(Vector3.forward * Time.deltaTime * _playerController.Force);
             }
         }
     }

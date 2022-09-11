@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySlots:
   - isFull: 0
-    itemCount: 4
+    itemCount: 2
     item: {fileID: 11400000, guid: b55ab60c78c5fb5439ad8f640ca5eb28, type: 2}
   - isFull: 0
     itemCount: 0

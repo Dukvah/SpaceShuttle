@@ -7,28 +7,37 @@ namespace SpaceShuttle.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] GameObject _radar, _leftStick, _rightStick;
         [SerializeField] OxygenSlider _oxygen;
-        [SerializeField] float _force;
+        [SerializeField] float _speed;
+        [SerializeField] float _gunRotationSpeed;
 
         public UIManager _uiManager;
         
         Animator _animator;
+        GunMover _gunMover;
         Mover _mover;
         Rotator _rotator;
         InputController _input;
         Rigidbody _rigidbody;
 
-        Vector2 _joystickDir;
+        Vector2 _moveJoystickDir;
+        Vector2 _gunJoystickDir;
+        
         bool _canMove;
         bool _canForceForward;
+        bool _canMining;
 
-        public float Force => _force;
+        public GameObject Radar => _radar;
+        public float Speed => _speed;
+        public float GunRotationSpeed => _gunRotationSpeed;
         public bool _breathable { get; set; }
 
         private void Awake()
         {
             _input = new InputController();
             _mover = new Mover(this);
+            _gunMover = new GunMover(this);
             _rotator = new Rotator(this);
             _animator = GetComponent<Animator>();
             _rigidbody = GetComponent<Rigidbody>();
@@ -46,16 +55,30 @@ namespace SpaceShuttle.Controllers
 
             if (_input.IsForceForward)
             {
+                _rightStick.SetActive(false);
                 _canForceForward = true;
                 _animator.SetBool("isFly", true);
             }
             else
             {
+                _rightStick.SetActive(true);
                 _canForceForward = false;
                 _animator.SetBool("isFly", false);
             }
 
-            _joystickDir = _input.JoystickDirection;
+            if (_input.IsMining)
+            {
+                _radar.SetActive(true);
+                _canMining = true;
+            }
+            else
+            {
+                _radar.SetActive(false);
+                _canMining = false;
+            }
+
+            _moveJoystickDir = _input.MoveJoystickDirection;
+            _gunJoystickDir = _input.GunJoystickDirection;
         }
 
         private void FixedUpdate()
@@ -67,7 +90,12 @@ namespace SpaceShuttle.Controllers
                 _mover.FixedTick(_canForceForward);
             }
 
-            _rotator.FixedTick(_joystickDir);
+            if (_canMining)
+            {
+                _gunMover.FixedTick(_gunJoystickDir);
+            }
+
+            _rotator.FixedTick(_moveJoystickDir);
         }
 
         public void OnBoard(Vector3 sitPositon)
@@ -77,8 +105,10 @@ namespace SpaceShuttle.Controllers
             
             transform.DOMove(sitPositon, 2f).OnComplete(() =>
             {
+                _animator.SetBool("inShip", true);
                 _canMove = false;
                 _breathable = true;
+                
             });
         }
 
@@ -88,6 +118,7 @@ namespace SpaceShuttle.Controllers
 
             transform.DOMove(new Vector3(transform.position.x, 0, transform.position.z + 1), 1f).OnComplete(() =>
             {
+                _animator.SetBool("inShip", false);
                 _canMove = true;
                 _breathable = false;
             });

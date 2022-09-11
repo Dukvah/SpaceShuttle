@@ -21,7 +21,7 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         transform.DOLocalRotate(new Vector3(0, 360, 0), 50f, RotateMode.FastBeyond360).SetRelative(true)
-            .SetEase(Ease.Linear);
+            .SetEase(Ease.Linear).SetLoops(-1,LoopType.Incremental);
     }
 
     public void MineCreator()

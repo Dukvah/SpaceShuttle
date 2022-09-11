@@ -10,7 +10,10 @@ namespace SpaceShuttle.Inputs
         DefaultAction _input;
 
         public bool IsForceForward { get; private set; }
-        public Vector2 JoystickDirection { get; private set; }
+        public bool IsMining { get; set; }
+        public Vector2 MoveJoystickDirection { get; private set; }
+        public Vector2 GunJoystickDirection { get; private set; }
+
 
 
         public InputController()
@@ -19,12 +22,22 @@ namespace SpaceShuttle.Inputs
             
             _input.Astronaut.Move.performed += context =>
             {
-                JoystickDirection = context.ReadValue<Vector2>();
-                IsForceForward = JoystickDirection.x != 0 || JoystickDirection.y != 0;
+                MoveJoystickDirection = context.ReadValue<Vector2>();
+                IsForceForward = MoveJoystickDirection.x != 0 || MoveJoystickDirection.y != 0;
             };
             _input.Astronaut.Move.canceled += context =>
             {
                 IsForceForward = false;
+            };
+            
+            _input.Astronaut.Gun.performed += context =>
+            {
+                GunJoystickDirection = context.ReadValue<Vector2>();
+                IsMining = GunJoystickDirection.x != 0 || GunJoystickDirection.y != 0;
+            };
+            _input.Astronaut.Gun.canceled += context =>
+            {
+                IsMining = false;
             };
             
             

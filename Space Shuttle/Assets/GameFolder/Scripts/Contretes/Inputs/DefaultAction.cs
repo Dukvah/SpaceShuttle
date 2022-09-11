@@ -37,6 +37,15 @@ namespace SpaceShuttle.Inputs
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Gun"",
+                    ""type"": ""Value"",
+                    ""id"": ""907e6e79-158c-4eb4-9e13-69789e5e55af"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -50,6 +59,17 @@ namespace SpaceShuttle.Inputs
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6d81190-b186-4285-8db9-736def7444ac"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -59,6 +79,7 @@ namespace SpaceShuttle.Inputs
             // Astronaut
             m_Astronaut = asset.FindActionMap("Astronaut", throwIfNotFound: true);
             m_Astronaut_Move = m_Astronaut.FindAction("Move", throwIfNotFound: true);
+            m_Astronaut_Gun = m_Astronaut.FindAction("Gun", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -119,11 +140,13 @@ namespace SpaceShuttle.Inputs
         private readonly InputActionMap m_Astronaut;
         private IAstronautActions m_AstronautActionsCallbackInterface;
         private readonly InputAction m_Astronaut_Move;
+        private readonly InputAction m_Astronaut_Gun;
         public struct AstronautActions
         {
             private @DefaultAction m_Wrapper;
             public AstronautActions(@DefaultAction wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Astronaut_Move;
+            public InputAction @Gun => m_Wrapper.m_Astronaut_Gun;
             public InputActionMap Get() { return m_Wrapper.m_Astronaut; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ namespace SpaceShuttle.Inputs
                     @Move.started -= m_Wrapper.m_AstronautActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_AstronautActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_AstronautActionsCallbackInterface.OnMove;
+                    @Gun.started -= m_Wrapper.m_AstronautActionsCallbackInterface.OnGun;
+                    @Gun.performed -= m_Wrapper.m_AstronautActionsCallbackInterface.OnGun;
+                    @Gun.canceled -= m_Wrapper.m_AstronautActionsCallbackInterface.OnGun;
                 }
                 m_Wrapper.m_AstronautActionsCallbackInterface = instance;
                 if (instance != null)
@@ -143,6 +169,9 @@ namespace SpaceShuttle.Inputs
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
+                    @Gun.started += instance.OnGun;
+                    @Gun.performed += instance.OnGun;
+                    @Gun.canceled += instance.OnGun;
                 }
             }
         }
@@ -150,6 +179,7 @@ namespace SpaceShuttle.Inputs
         public interface IAstronautActions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnGun(InputAction.CallbackContext context);
         }
     }
 }

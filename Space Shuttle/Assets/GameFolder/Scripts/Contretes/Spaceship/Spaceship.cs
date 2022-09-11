@@ -63,16 +63,19 @@ public class Spaceship : MonoBehaviour
     public void OnBoard()
     {
         animator.SetBool("OpenDoor",true);
+        
+        _playerController.gameObject.transform.parent = this.gameObject.transform;
         _playerController.OnBoard(_sitPostion.transform.position);
+        
         _radarZone.SetActive(false);
         OnPlayer = false;
         CanFly = true;
-
-        _playerController.gameObject.transform.parent = this.gameObject.transform;
     }
 
     public void Launch()
     {
+        animator.SetBool("OpenDoor",false);
+        navMeshAgent.destination = transform.position;
         CanFly = false;
         StartCoroutine(LaunchAsync());
     }
